@@ -1,12 +1,12 @@
 # Simulation of Epidemic Spreading in Varying Network Topologies
-by Duncan Hall and Seungin Lyu
+## by Duncan Hall and Seungin Lyu
 
 ### Abstract
 
 We investigate the phenomenon of epidemic spreading by running SIS model simulation on varying network topologies including the Erdos-Renyi graph, Barabasi and Albert’s power law graph. We experiment with the epidemic threshold that yields different steady states on different network topologies. We plan to animate the dynamic states of the epidemic spreading using networkX in addition to replicating the plots that are present in the papers listed in our annotated bibliography so that we get a better visual sense of the process.
 
 ### Annotated Bibliography
-()Susceptsusceptible-infected-susceptible
+
 #### 1. [Epidemic spreading in scale-free networks](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/papers/epidemic_spreading_in_SF_networks.pdf)
 
 Pastor-Satorras, Romualdo, and Alessandro Vespignani. "Epidemic spreading in scale-free networks." Physical review letters 86.14 (2001): 3200.
@@ -33,7 +33,7 @@ They present a new analytic model called NLDS(nonlinear dynamic system) that mak
 
 We plan to use a susceptible-infected-susceptible (SIS) disease model in our simulation, and will examine the spread of that disease through ER, WS, and SF topologies. In ER and WS graphs we expect the infected fraction of nodes to be unstable and either go to zero as the disease is exterminated or the entire network to become infected. In a SF topology however, we expect to see an equilibrium reached with a constant fraction of infected nodes. Below are some sketches of the graphs we anticipate:
 
-![Anticipated Graphs]("/../resources/epidemic_simulation_graphs.JPG")
+![Anticipated Graphs](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/resources/epidemic_simulation_graphs.JPG)
 
 As extensions we would like to model the interaction of multiple diseases, with a variety of interaction mechanisms. Our ideas include a disease which makes nodes more susceptible to another disease, a disease with cures the other, or mutually exclusive diseases. We do not yet know what to expect from these experiments, but it would be cool to visualize the results over time with networkx’s imaging functions.
 
