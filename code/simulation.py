@@ -37,22 +37,21 @@ def run_SIS_simulation(graph, lam, rho_0=0.5, time_steps=1000):
     # begin time steps
     for _ in range(time_steps):
 
-        for n in graph.nodes():
+        # susceptible nodes that are adjacent to infected nodes
+        at_risk = set()
+        for inf in infected:
+            at_risk.update(set(graph[inf]))
 
-            # susceptible nodes are infected with probability lambda if they
-            #   have at least one infected neighbor.
-            if n not in infected:
-                for m in graph[n]:
+        # remove any currently infected nodes from at_risk
+        at_risk.difference_update(infected)
 
-                    if m in infected:
-                        if flip(lam):
-                            infected.add(n)
-                        # we only make one roll per susceptible node
-                        break
+        # infected nodes are cured with a probability of d = 1
+        infected = set()
 
-            # infected nodes are cured with a probability of d = 1
-            else:
-                infected.remove(n)
+        # roll for at_risk nodes
+        for n in at_risk:
+            if flip(lam):
+                infected.add(n)
 
         # verify that there are still infected nodes
         if not infected:
