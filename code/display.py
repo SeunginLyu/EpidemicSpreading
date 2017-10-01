@@ -5,7 +5,9 @@ of disease.
 import thinkplot
 
 def plot_all_time_steps(infection_data):
-    thinkplot.plot([0, len(infection_data)], [0.0, 1.0], color='gray')
+    # thinkplot.preplot()
+    thinkplot.plot(range(len(infection_data)), infection_data, color='gray')
+    # thinkplot.config(xlabel='time', ylabel='rho', xlim=[0, len(infection_data)], ylim=[0.0, 1.0])
 
 def plot():
     pass

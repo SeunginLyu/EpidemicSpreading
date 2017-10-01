@@ -30,7 +30,7 @@ def run_SIS_simulation(graph, lam, rho_0=0.5, time_steps=1000):
     Returns:
     final infection fraction rho
     """
-    infected_nums = np.zero(time_steps)
+    infected_nums = np.zeros(time_steps)
     # initial state
     infected = set(random.sample(graph.nodes(), int(graph.number_of_nodes() * rho_0)))
     # begin time steps
