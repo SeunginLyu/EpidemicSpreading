@@ -30,24 +30,20 @@ def run_SIS_simulation(graph, lam, rho_0=0.5, time_steps=1000):
     Returns:
     final infection fraction rho
     """
-
+    infected_nums = np.zero(time_steps)
     # initial state
     infected = set(random.sample(graph.nodes(), int(graph.number_of_nodes() * rho_0)))
-
     # begin time steps
-    for _ in range(time_steps):
-
+    for t in range(time_steps):
+        infected_nums[t] = len(infected) / float(graph.number_of_nodes())
         # susceptible nodes that are adjacent to infected nodes
         at_risk = set()
         for inf in infected:
             at_risk.update(set(graph[inf]))
-
         # remove any currently infected nodes from at_risk
         at_risk.difference_update(infected)
-
         # infected nodes are cured with a probability of d = 1
         infected = set()
-
         # roll for at_risk nodes
         for n in at_risk:
             if flip(lam):
@@ -57,4 +53,4 @@ def run_SIS_simulation(graph, lam, rho_0=0.5, time_steps=1000):
         if not infected:
             break
 
-    return len(infected) / float(graph.number_of_nodes())
+    return infected_nums
