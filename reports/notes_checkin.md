@@ -28,25 +28,30 @@
         to update the status for time t only statuses of time t-1 of the other nodes are considered.
    - surviving probability P_s(t) : virsuses still alive at time t after their birth / total number of observed virsuses
 * What was the result of the experiment?
- *  
-  absence of an epidemic threshold
- *  
-
+ * absence of an epidemic threshold
+ * Viruses with any spreading rate reach a steady state of prevalence as rho ~ exp(-C/lamda)
+ * Viruses have longer average lifetime in large SF networks
 
 * How does this result answer the question?
   * SF networks are prone to the spreading and the persistence of infections whatever "spreading rate the epidemic agents possess"
+ 
 
 * Have you replicated the experiment?  Any important details to report?
+	* yes! we have, with flying colors, except for one graph
 
 * Did the experiment replicate?  If so, how do you show that your results agree with theirs?  If not, do you understand why not?
+	* using the same parameters and assumptions (and guessing some of their assumptions correctly), we obtained an almost exact replica of a critical figure.
 
 ### Plans for Extension
 
 * What question will your experiment answer?
+	* how viral prevalence and persistence/survival changes in a real-world graph (using Facebook data)
 
 * What methodological changes will you have to make?
+	* we'll look at a single time-series of one strain through the network, then move from there. 
 
 * What might the results look like?
+	* we'll see
 
 * How will you interpret the results?
 
@@ -54,7 +59,7 @@
 ### Notes
 
 * key words :
-  - the average liftime and prevalence of viral strains
+  - the average lifetime and prevalence of viral strains
   - power-law distribution with gamma from 2 ~ 3
   - local clustering
   - "nonequilibrium phase transitions"
