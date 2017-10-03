@@ -25,14 +25,19 @@ def run_SIS_simulation(graph, lam, rho_0=0.5, time_steps=1000):
     lam : lambda, the spreading rate which is a ratio v / d where v is the
             infection rate and d is the recovery rate. We fix d = 1 without
             loss of generality.
-    rho_0 : the initial infection fraction
+    rho_0 : the initial infection fraction. If None, set one infected node
 
     Returns:
     final infection fraction rho
     """
     infected_nums = np.zeros(time_steps)
+
     # initial state
-    infected = set(random.sample(graph.nodes(), int(graph.number_of_nodes() * rho_0)))
+    if rho_0 is None:
+        infected = set(random.sample(graph.nodes(), 1))
+    else:
+        infected = set(random.sample(graph.nodes(), int(graph.number_of_nodes() * rho_0)))
+
     # begin time steps
     for t in range(time_steps):
         infected_nums[t] = len(infected) / float(graph.number_of_nodes())
