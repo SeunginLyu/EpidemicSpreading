@@ -8,6 +8,8 @@ import random
 
 
 def flip(p):
+    if p > 1:
+        raise ValueError('probability must be 0 < p < 1')
     return np.random.random() < p
 
 
@@ -102,6 +104,7 @@ def load_graph(filename):
     G = nx.Graph()
     array = np.loadtxt(filename, dtype=int)
     G.add_edges_from(array)
+    return G
 
 
 # graph = gen_ER_graph(10, 0.3)
