@@ -5,11 +5,27 @@
 ### Abstract
 
 
+
+"Why do epideimc spreading models with local connectivity contradict with the statistical observations of virus epidemics that viruses are able to pervade and spread much slower than exponentially, and saturate to a low level of persistence?".
+
+"how viral prevalence and persistence/survival changes in a real-world graph?""
+
+
+
+In this report, we replicate an experiment by Pastor-Satorras and Vespignani[1] in an effort to answer the question
+
+
+We investigate the phenomenon of epidemic spreading by running susceptible-infected-susceptible(SIS) model simulation on varying network topologies including the Erdos-Renyi graph, Watts and Strogatz graph, and Barabasi and Albert’s power law graph. We
+
+
+
+
 ### Introduction
 
 
 
 ### Methods
+
 
 
 
@@ -22,71 +38,25 @@
 for epidemic threshold: we see that the virus dies out on BA graphs too, but increasing the number of nodes fixes that. Maybe it doesn't fix on non-scale-free graphs? we need to change ER graph generation to test this though
 
 
+### Bibliography
+
+#### 1. [Epidemic spreading in scale-free networks](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/papers/epidemic_spreading_in_SF_networks.pdf)
+
+Pastor-Satorras, R., & Vespignani, A. (2001). Epidemic spreading in scale-free networks. Physical review letters, 86(14), 3200.
+
+Pastor-Satorras and Vespignani  designed a model for the spreading of infections on scale-free networks. They applied the susceptible-infected-susceptible (SIS) epidemiological model on scale-free graphs (Barabasi and Albert). They believe that models with SIS applied to Euclidean lattices, ER graphs, and WS graphs aren’t completely adequate to represent the real phenomenon because the end behavior after time *t* eventually yields either complete extinction or complete prevalence of a computer virus depending on whether the effective spreading rate is greater or less than the epidemic threshold. They discover the absence of the epidemic threshold in scale-free networks and conclude that “infections can proliferate on these scale-free networks whatever spreading rates they may have. These very bad new are, however, balanced by the exponentially small prevalence for a wide range of spreading rate”.
+
+#### 2. [Epidemic spreading in Real Networks : An Eigenvalue Viewpoint](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/papers/epidemic_threshols_real_networks_eignevalue.pdf)
+
+Wang, Y., Chakrabarti, D., Wang, C., & Faloutsos, C. (2003, October). Epidemic spreading in real networks: An eigenvalue viewpoint. In Reliable Distributed Systems, 2003. Proceedings. 22nd International Symposium on (pp. 25-34). IEEE.
+
+Wang, Yang and Chenxi Wang proposed a ‘general’ epidemic threshold condition that applies to arbitrary graphs and prove that the epidemic threshold is closely related to the largest eigenvalue of its adjacency matrix under reasonable approximations. They point out that the model proposed by Pastor-Satorras and Vespignani is only limited to the BA graph and only works heavily under the assumption that gamma = 3 when *P(k) = k^(-gamma)* (*P(k)* is the probability that a node has *k* links). They validate their epidemic spreading model on both homogeneous graphs like ER graph and power-law scale free graphs like the BA graph. They conclude that their threshold condition holds for arbitrary graphs by validating their model through extensive experiments on real and synthesized graphs.
 
 
-### Expreiment Replication 1
+#### 3. [Epidemic Thresholds in Real Networks](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/papers/epidemic_thresholds_real_netowkrs.pdf)
 
-* What experiment are you replicating?   Who did it?  Any relevant background on the people or the publication?
-
-
-* What question was their experiment intended to answer?  Is it a prediction, explanation, or design question?
- * Why do epideimc spreading models with local connectivity contradict with the statistical observations of virus epidemics that viruses are able to pervade and spread much slow than exponentially, and saturate to a low level of persistence?
-  * (looking for an explanation and desgining a model that represents the real phenomenon)
-
-* How did they go about answering it?
- * Hypotehsis : "What is the effect of scale-free nature of networks on epidemic spreading?"(explanation)
- * first observe and analyze data reported by Virus Bulletin - > exponential tail(SF proproperty)
-  * ER, WS (does not capture Scale free nature of the internet ) ->>>  simulations & analysis of SIS model on SF graphs(BA graph)
- * BA graph specifications :
-  * k = 3, (<k> = 6)
-  * N = 10^3 to 8.5 * 10^6
-  * studied virus prevalence : density of infected nodes rho in surviving infections
-    (when the simulation enters steady sate with constant average dneisty of infected nodes)
-   - 1) initially infect half of the nodes
-   - 2) SIS model with parallel updating each time stpe t
-     * SIS model :
-      * An infected node recovers with probabiliy(rate) sigma (they set it to = 1)
-      * An infected node attemps to infect each neighbor with probability(rate) v
-      * Note : Updating of the nodes statuse are done in parallel, that is,
-        to update the status for time t only statuses of time t-1 of the other nodes are considered.
-   - surviving probability P_s(t) : virsuses still alive at time t after their birth / total number of observed virsuses
-* What was the result of the experiment?
- * absence of an epidemic threshold
- * Viruses with any spreading rate reach a steady state of prevalence as rho ~ exp(-C/lamda)
- * Viruses have longer average lifetime in large SF networks
-
-* How does this result answer the question?
-  * SF networks are prone to the spreading and the persistence of infections whatever "spreading rate the epidemic agents possess"
+Chakrabarti, D., Wang, Y., Wang, C., Leskovec, J., & Faloutsos, C. (2008). Epidemic thresholds in real networks. ACM Transactions on Information and System Security (TISSEC), 10(4), 1.
+Chicago
 
 
-* Have you replicated the experiment?  Any important details to report?
-	* yes! we have, with flying colors, except for one graph
-
-* Did the experiment replicate?  If so, how do you show that your results agree with theirs?  If not, do you understand why not?
-	* using the same parameters and assumptions (and guessing some of their assumptions correctly), we obtained an almost exact replica of a critical figure.
-
-### Plans for Extension
-
-* What question will your experiment answer?
-	* how viral prevalence and persistence/survival changes in a real-world graph (using Facebook data)
-
-* What methodological changes will you have to make?
-	* we'll look at a single time-series of one strain through the network, then move from there.
-
-* What might the results look like?
-	* we'll see
-
-* How will you interpret the results?
-
-
-### Notes
-
-* key words :
-  - the average lifetime and prevalence of viral strains
-  - power-law distribution with gamma from 2 ~ 3
-  - local clustering
-  - "nonequilibrium phase transitions"
-  - effective spreading rate gamma = mu / sigma
-  - in models with local connectivity, nonzero epideimc threshold exists
-    - if gamma above gamma_c, infection become persistent
-    - if gamma below gamma_c, infection dies out exponentially.
+They present a new analytic model called NLDS(nonlinear dynamic system) that makes no assumptions about the network topology and show that their model performs as well or better than the previous models that are targeted specifically to fit certain special case graphs like ER, WS, and BA graphs. This is an improved version of <i>Epidemic Spreading in Real Networks : An Eigenvalue Viewpoint</i> (written five years later by almost the same group of author). They conclude that their threshold condition can be used to design new network topologies that are more resistant to viruses.
