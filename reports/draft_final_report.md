@@ -49,15 +49,22 @@ exponential behavior, following a sharp initial drop, is compatible with the dat
 
 </center>
 
-### Extending Beyond : ER, WS, Facebook
+### Going Beyond : SIS model simluation on ER, WS, Facebook network
 
-We are still in the process of replicating plots for ER and WS graphs. We notice that even in ER and WS graphs, the virus prevalence reaches a steady state without rapidly converging to either full infection or no infection as opposed to our original hypotehsis. We observe that running the same simulation on the Facebook data yields
+We are still in the process of replicating plots for ER and WS graphs. We notice that even in ER and WS graphs, the virus prevalence reaches a steady state without rapidly converging to either full infection or no infection as opposed to our original hypotehsis. We observe that running the same simulation on the Facebook data yields the results shown in Figure 3.
+
+<center>
+![Figure 3](../resources/figure3.png)
+*Fiture 3.*
+</center>
 
 
 ### Conclusion
 
-For epidemic threshold, we see that the virus dies out on BA graphs too, but increasing the number of nodes fixes that. Maybe it doesn't fix on non-scale-free graphs? we need to change ER graph generation to test this though
+We conclude that scale-free networks are prone to epidemic spreading regardless of the spreading rate,
+(while non-scale-free networks yield either persistent or zero infection)
 
+For epidemic threshold, we see that the virus dies out on BA graphs too, but increasing the number of nodes fixes that.
 
 ### Bibliography
 
