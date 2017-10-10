@@ -56,8 +56,8 @@ exponential behavior, following a sharp initial drop, is compatible with the dat
 We are still in the process of replicating plots for ER and WS graphs. We notice that even in ER and WS graphs, the virus prevalence reaches a steady state without rapidly converging to either full infection or no infection as opposed to our original hypotehsis. We observe that running the same simulation on the Facebook data yields the results shown in Figure 3.
 
 <br>
-![Figure 3](../resources/figure3.png)
-![Figure 3](../resources/figure3.png)
+
+![Figure 3](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/resources/figure3.png)
 
 <br>
 
