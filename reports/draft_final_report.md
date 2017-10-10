@@ -57,6 +57,7 @@ We are still in the process of replicating plots for ER and WS graphs. We notice
 
 <br>
 ![Figure 3](../resources/figure3.png)
+![Figure 3](../resources/figure3.png)
 
 <br>
 
