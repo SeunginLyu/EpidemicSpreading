@@ -7,32 +7,22 @@
 How prevalent is epidemic spreading in various network topologies? What is the survival probability of viruses over a range of time? We answer these questions by replicating an experiment by Pastor-Satorras and Vespignani [1] which involves running the susceptible-infected-susceptible(SIS) model in Barabasi and Albert's(BA) power law graph. We apply their methodology on varying network topologies including the Erdos-Renyi graph(ER), Watts and Strogatz(WS) graph, and Facebook dataset(SNAP) to further investigate the validity of their model on varying network topologies. We show that viruses with any spreading rate reach a steady state of prevalence on scale-free networks. We conclude that scale-free networks are prone to epidemic spreading regardless of the spreading rate, while non-scale-free networks yield either persistent or zero infection.
 
 
-### Introduction
+### Replication of Pastor-Satorras and Vespignani's experiment
 
-* Why do epideimc spreading models with local connectivity contradict with the statistical observations of virus epidemics that viruses are able to pervade and spread much slow than exponentially, and saturate to a low level of persistence?
-* (looking for an explanation and desgining a model that represents the real phenomenon)
+Pastor-Satorras and Vespignani originally asks the question "why do epideimc spreading models with local connectivity contradict with the statistical observations of virus epidemics that viruses are able to pervade and spread much slow than exponentially, and saturate to a low level of persistence?" [1]. After observing and analyzing data reported by virus Bulletin, they claim that previous spreading models which involves graphs with local connectivity like ER graph and WS graph don't illustrate the scale-free nature of the real world networks such as the Internet. While looking for an explanation and designing a model that represents the real world, they hypothesize that running SIS model simulation on Barabasi and Albert's graph will illustrate the exponential tail of virus prevalence.
 
-* How did they go about answering it?
- * Hypotehsis : "What is the effect of scale-free nature of networks on epidemic spreading?"(explanation)
- * first observe and analyze data reported by Virus Bulletin - > exponential tail(SF proproperty)
-  * ER, WS (does not capture Scale free nature of the internet ) ->>>  simulations & analysis of SIS model on SF graphs(BA graph)
+To find how prevalent epidemic spreading is in various network topologies, we replicate both the experiment that they explitcly conducted with BA graph and the experiments with ER and WS graphs that they did not demonstrate in their paper.
 
-### Methods
+We use the the susceptible-infected-susceptible(SIS) epidemic model as our primary means of simulation. In SIS model, an infected node recovers with probability(rate) σ. An infected node attempts to infect each neighbor with probability(rate) µ. We define the spreading rate λ = µ/σ. We fix σ = 1 without loss of generality [1]. Note that updating the nodes statuses is done in parallel, that is, to update the status for time t, only statuses of time (t-1) of the nodes are condisered.
 
+We define a list of terms for our experiments. Virus prevalence means the density of infected nodes 'ρ' when the simulation enters steady sate with constant average dneisty of infected nodes. So we evaluate the virus prevalence 'ρ' by calculating the mean of infected nodes at time step t over multiple trials (n = 10). Surviving probability P_s(t) means the ratio of virsuses still alive at time step t after their birth to total number of observed virsuses.
 
-Define SIS
+We use a BA graph generated from the NetworkX's barabasi_albert_graph(n, k) function. We set the number of edges to attach from a new node to existing nodes k = 3. We use the number of nodes N ranging from 10^3 to 8.5*10^6.
 
-Define virus prevalence
+In order to replicate Figure 1.1., we initially infect half of the nodes.
+We show the results of our simulation in Figure 1.2 and Figure 2.2
 
-Define surviving probability
-
-Plot steady state - mean
-
-rho_0 = None -> 1 initial infected node
-
-
-### Results
-
+<center>
 ![Figure 1_](../resources/figure1_.png)
 <br>
 *Figure 1.1. "Persistence ρ as a function of 1/λ for different network sizes: N = 10 5 (+), N = 5× 10 5
@@ -41,7 +31,7 @@ semi-logarithmic scale proves the stretched exponential behavior predicted for �
 fit to the form ρ ∼ exp(−C/λ)."" [1]*
 <br>
 
-<center>
+
 ![Figure 1](../resources/figure1.png)
 <br>
 *Figure 1.2*
@@ -59,6 +49,10 @@ exponential behavior, following a sharp initial drop, is compatible with the dat
 <br>
 
 </center>
+
+### Extending Beyond : ER, WS, Facebook
+
+
 
 ### Conclusions
 
