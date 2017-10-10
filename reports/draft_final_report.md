@@ -60,7 +60,7 @@ We are still in the process of replicating plots for ER and WS graphs. We notice
 ![Figure 3](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/resources/figure3.png)
 
 <br>
-*Figure 3.*
+*Figure 3. We run the SIS model simulation on the Facebook data provided by SNAP. We observe qualitatively semi-logamathrically linear graph as in Figure 1.1 and Figure 1.2 but quantitatively the prevalence is higher in this plot.*
 
 ### Conclusion
 
