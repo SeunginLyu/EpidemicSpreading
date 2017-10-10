@@ -22,7 +22,9 @@ We use a BA graph generated from the NetworkX's barabasi_albert_graph(n, k) func
 We show the results of our simulation in Figure 1.2 and Figure 2.2 in comparison to the original plots [1] in Figure 1.1 and Figure 1.2 respectively. We illustrate that viruses with spreading rate ranging from 1/22 to 1/7 reach a steady state of prevalence `ρ ~ exp(-C/λ)` on the BA graph as shown in both Figure 1.1 and Figure 1.2. We run 100,000 trials to replicate Figure 2.1 upto 50 time stpes as shown in Figure 2.2.
 
 <center>
-![Figure 1_](../resources/figure1_.png)
+
+![Figure 11](../resources/figure11.png)
+
 <br>
 *Figure 1.1. "Persistence ρ as a function of 1/λ for different network sizes: N = 10 5 (+), N = 5× 10 5
 (✷), N = 10 6 (×), N = 5 × 10 6 (◦), and N = 8.5 × 10 6 (✸). The linear behavior on the
@@ -37,7 +39,7 @@ fit to the form ρ ∼ exp(−C/λ)."" [1]*
 <br>
 
 
-![Figure 2_](../resources/figure2_.png)
+![Figure 21](../resources/figure21.png)
 *Figure 2.1. a) "Surviving probability P s (t) for a spreading rate λ = 0.065 in scale-free networks of
 size N = 5 × 10 5 (✷), N = 2.5 × 10 4 (✸), N = 1.25 × 10 4 (△), and N = 6.25 × 10 3 (◦). The
 exponential behavior, following a sharp initial drop, is compatible with the data analysis of Figure 1.1" [1]*
@@ -55,7 +57,7 @@ We are still in the process of replicating plots for ER and WS graphs. We notice
 
 <center>
 ![Figure 3](../resources/figure3.png)
-*Fiture 3.*
+*Figure 3*
 </center>
 
 
