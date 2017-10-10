@@ -19,8 +19,7 @@ We define a list of terms for our experiments. Virus prevalence means the densit
 
 We use a BA graph generated from the NetworkX's barabasi_albert_graph(n, k) function. We set the number of edges to attach from a new node to existing nodes k = 3. We use the number of nodes N ranging from 10^3 to 8.5*10^6.
 
-In order to replicate Figure 1.1., we initially infect half of the nodes.
-We show the results of our simulation in Figure 1.2 and Figure 2.2
+We show the results of our simulation in Figure 1.2 and Figure 2.2 in comparison to the original plots [1] in Figure 1.1 and Figure 1.2 respectively. We illustrate that viruses with spreading rate ranging from 1/22 to 1/7 reach a steady state of prevalence `ρ ~ exp(-C/λ)` on the BA graph as shown in both Figure 1.1 and Figure 1.2. We run 100,000 trials to replicate Figure 2.1 upto 50 time stpes as shown in Figure 2.2.
 
 <center>
 ![Figure 1_](../resources/figure1_.png)
@@ -34,7 +33,7 @@ fit to the form ρ ∼ exp(−C/λ)."" [1]*
 
 ![Figure 1](../resources/figure1.png)
 <br>
-*Figure 1.2*
+*Figure 1.2. We quantitatively replicate the original plot shown in Figure 1.1. We confirm that the persistence ρ is indeed semi-logarithmically linear.*
 <br>
 
 
@@ -45,18 +44,19 @@ exponential behavior, following a sharp initial drop, is compatible with the dat
 <br>
 ![Figure 2](../resources/figure2.png)
 <br>
-*Figure 2.1*
+*Figure 2.2. We qualitatively replicate the original plot shown in Figure 2.1. Note that we only run the simultation upto 50 time steps due to time complexity.*
 <br>
 
 </center>
 
 ### Extending Beyond : ER, WS, Facebook
 
+We are still in the process of replicating plots for ER and WS graphs. We notice that even in ER and WS graphs, the virus prevalence reaches a steady state without rapidly converging to either full infection or no infection as opposed to our original hypotehsis. We observe that running the same simulation on the Facebook data yields
 
 
-### Conclusions
+### Conclusion
 
-for epidemic threshold: we see that the virus dies out on BA graphs too, but increasing the number of nodes fixes that. Maybe it doesn't fix on non-scale-free graphs? we need to change ER graph generation to test this though
+For epidemic threshold, we see that the virus dies out on BA graphs too, but increasing the number of nodes fixes that. Maybe it doesn't fix on non-scale-free graphs? we need to change ER graph generation to test this though
 
 
 ### Bibliography
