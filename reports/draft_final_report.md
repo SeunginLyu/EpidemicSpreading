@@ -60,7 +60,7 @@ We are still in the process of replicating plots for ER and WS graphs. We notice
 ![Figure 3](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/resources/figure3.png)
 
 <br>
-
+*Figure 3.*
 
 ### Conclusion
 
