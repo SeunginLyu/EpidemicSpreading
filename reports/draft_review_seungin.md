@@ -29,7 +29,7 @@
 
 8. Presentation:
     * I see several places where you use the past tense when you could in fact use the present tense instead.
-    * I recommend using Figure 1. and Figure 2. instead of saying "The <i> following table </i>shows... <i>and the table after<i>.." I actually got a little confused when read "the first figure, the second figure, and the third figure.."
+    * I recommend using Figure 1. and Figure 2. instead of saying "The <i> following table </i>shows... <i>and the table after</i>.." I actually got a little confused when read "the first figure, the second figure, and the third figure.."
     * I don't think distinguishing tables and figures is necessary(I would use something like Figure1, Figure2, Figure 3 ...)
     * I do not see any captions for the figures. I believe adding simple descriptions for each figure will help both you and the readers quickly understand the results.
     * I would write "Page and Brin design [1]" instead of "In Page and Brin's paper The PageRank Citation Ranking: Bringing Order to the Web, the two Stanford researchers design"
