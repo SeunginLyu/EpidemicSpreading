@@ -3,29 +3,28 @@
     * I am having trouble understanding the mathmatical definitions frequently used in this paper. What are back links and links? How does page rank algorithm work? What is a collaboration network?
     * You do mention the definition of betweenness centrality as "a metric for determining the centrality of nodes in a graph based on shortest path lengths", but I only have a vague understanding of the concept. How do you evaluate the centrality of nodes?
 
-2. Methodology: Do you understand the methodology?  Does it make sense for the question?  Are there limitations you see that the team did not address?
+2. Methodology:
       * "We assumed that if there was a high correlation between the page rank probability distribution of a node and the betweenness centrality of the same node, then the page rank algorithm would be an accurate way of determining which websites are most popular."
       * I assume that you are comparing the PageRank algorithm with Brandes' optimized algorithm from the paper you are citing, but I don't understand how that answers your question.
       * "...there was high correlation between the probability distribution of page rank and the betweenness centrality of the nodes. "
 
-3. Results: Do you understand what the results are (not yet considering their interpretation)?  If they are presented graphically, are the visualizations effective?  Do all figures have labels on the axes and captions?
-
+3. Results:
       * I clearly understand that there is a strong corrleation between the page rank probability and the betweenness centrality for both BA and ER graphs.
       * Titles like "Simulation on BA graph" and "Simulation on ER graph" are missing from the figures.
 
-4. Interpretation: Does the draft report interpret the results as an answer to the motivating question?  Does the argument hold water?
+4. Interpretation:
       * I don't understand your interpretation that "the page rank algorithm would be a good metric to determine which websites should be shown first, since there is a strong correlation between page rank probability and centrality." because I do not intuitively get what centrality is.
       * Even if your interpretation is totally valid(which I believe it is), youur interpretation of the results still does not answer your question "is Google really the best search engine?". I don't think this question can be answered unless you compare all the existing search engines which I believe is way beyond the scope of this project.
 
-5. Replication: Are the results in the report consistent with the results from the original paper?
+5. Replication:
       * The results of page rank algorithm replication are consistent with the results from the original paper.
 
-6. Extension: Does the report explain an extension to the original experiment clearly?  Is it a sensible extension in the sense that it has the potential to answer an interesting question that the original experiment did not answer?
+6. Extension:
       * I see that you are extending your experiment by applying the same methodology used in BA and ER grphs to a collaboration network.
       * I would definetely understand the content better if I was given a brief explanation about what a collaboration network is.
       * I'm not sure if this extension actually helps me answer the original question.
 
-7. Progress: Is the team roughly where they should be at this point, with a replication that is substantially complete and an extension that is clearly defined and either complete or nearly so?
+7. Progress:
       * I see that the implementation of the algorithms and simulations is complete. The replication is complete and the extension is complete too. It seems like you are stil working on the interpretation and the conclusion part of the report.
 
 8. Presentation:
