@@ -4,9 +4,7 @@
     * You do mention the definition of betweenness centrality as "a metric for determining the centrality of nodes in a graph based on shortest path lengths", but I only have a vague understanding of the concept. How do you evaluate the centrality of nodes?
 
 2. Methodology:
-      * "We assumed that if there was a high correlation between the page rank probability distribution of a node and the betweenness centrality of the same node, then the page rank algorithm would be an accurate way of determining which websites are most popular."
-      * I assume that you are comparing the PageRank algorithm with Brandes' optimized algorithm from the paper you are citing, but I don't understand how that answers your question.
-      * "...there was high correlation between the probability distribution of page rank and the betweenness centrality of the nodes. "
+      * "We assumed that if there was a high correlation between the page rank probability distribution of a node and the betweenness centrality of the same node, then the page rank algorithm would be an accurate way of determining which websites are most popular." What is the reasoning behind this assumption? What is the logical flow of thoughts that eventually lead you to this assumption? 
 
 3. Results:
       * I clearly understand that there is a strong corrleation between the page rank probability and the betweenness centrality for both BA and ER graphs.
