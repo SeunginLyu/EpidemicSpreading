@@ -25,14 +25,12 @@ We show the results of our simulation in Figure 1 and Figure 2.
 *Figure 1. : (left) Pastor-Satorras and Vespignani original figure [1] of prevalence ρ as a function of 1/λ for different network sizes: N = 10<sup>5</sup> (+), N = 5 × 10<sup>5</sup>(◻), N = 10<sup>6</sup> (×), N = 5 × 10<sup>6</sup> (○), and N = 8.5 × 10<sup>6</sup> (◇). The full line is a fit to the form ρ ∼ exp(−C/λ); (right) We replicate the original plot with our own simulation. We use the identical semi-log axis as used in the original. Each color corresponds to a network size in the original experiment.(from red : N = 10<sup>5</sup> to sky blue : N = 8.5 × 10<sup>6</sup>). The prevalence constant C, or the slope of the linear fitting line is -0.38.*
 
 
-<center>
-
 ![Figure 21](../resources/figure21.png) ![Figure 2](../resources/figure22.png)
-</center>
-<br>
+
+
 *Figure 2. : (left) Pastor-Satorras and Vespignani original figure [1] of the surviving probability P<sub>s</sub>(t) for a spreading rate λ = 0.065 in scale-free networks of size N = 5 × 10<sup>5</sup> (◻), N = 2.5 × 10<sup>4</sup> (◇), N = 1.25 × 10<sup>4</sup> (△), and N = 6.25 × 10<sup>3</sup> (○); (right). We replicate the original plot with our own simulation. Note we run the simulation for 50 time steps and run 100,000 trials in total. While the horizontal steady state for N = 5 × 10<sup>5</sup> matches that of the original plot, we observe quantitative differences for all other network sizes.*
 
-
+<br>
 
 In Figure 1, we illustrate that viruses with spreading rate ranging from 1/22 to 1/7 reach a steady state of prevalence `ρ ~ exp(-C/λ)` on the BA graph. We confirm that our replicated plot of ρ as a function of 1/λ quantitatively agrees with the original. One interpretation of the plot shown in Figure 1 is that viruses persist at a low prevalence that is always greater than 0(finite prevalence) in a BA graph regardless of the network size. Another interpretation is that the virus prevalence is exponentially proportional to the inverse of the spreading rate. So the faster the spreading rate is, the lower the prevalence is going to be.
 
@@ -51,10 +49,8 @@ With higher prevalence level, viruses can stay more prevalent in the Facebook ne
 
 
 
-<center>
 ![Figure 3](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/resources/figure3.png)
 
-</center>
 *Figure 3. We run the SIS model simulation on the Facebook data provided by SNAP. We run 100 trials for each spreading rate until time step 50. The prevalence constant C or the slope of the linear fitting line is 0.11 which is 0.27 less than that of the BA graph in Figure 1. The prevalence level is also significantly higher by a factor of roughly 100.*
 
 
