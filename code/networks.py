@@ -10,7 +10,7 @@ import random
 def flip(p):
     if p > 1:
         raise ValueError('probability must be 0 < p < 1')
-    return np.random.random() < p
+        return np.random.random() < p
 
 
 def gen_ER_graph(n, p):
