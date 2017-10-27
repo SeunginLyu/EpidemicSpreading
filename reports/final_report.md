@@ -26,6 +26,7 @@ We show the results of our simulation in Figure 1 and Figure 2.
 
 
 ![Figure 21](../resources/figure21.png) ![Figure 2](../resources/figure22.png)
+
 *Figure 2. : (left) Pastor-Satorras and Vespignani's original figure of the surviving probability P<sub>s</sub>(t) for a spreading rate λ = 0.065 in scale-free networks of size N = 5 × 10<sup>5</sup> (◻), N = 2.5 × 10<sup>4</sup> (◇), N = 1.25 × 10<sup>4</sup> (△), and N = 6.25 × 10<sup>3</sup> (○) [1]; (right). We replicate the original plot with our own simulation. Note we run the simulation for 50 time steps and run 100,000 trials in total. While the horizontal steady state for N = 5 × 10<sup>5</sup> matches that of the original plot, we observe quantitative differences for all other network sizes.*
 
 
